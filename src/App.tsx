@@ -1,12 +1,17 @@
 import './App.css'
 import './assets/css/fonts.css'
+import { createBrowserRouter, RouterProvider } from 'react-router'
+import Index from './pages'
+
+const router = createBrowserRouter([
+  {
+    path:"/",
+    Component:Index
+  }
+])
 
 function App() {
-  return (
-    <div className='bg-black text-white font-hero text-[9rem] flex items-center justify-center h-screen'>
-        <h1>Trabalho em Andamento.</h1>
-    </div>
-  )
+  return <RouterProvider router={router} />
 }
 
 export default App
