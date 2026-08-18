@@ -1,15 +1,15 @@
-import TeacherCard from "./ui/teacherCard"
-import fabio from '@/assets/fabio.png'
-import vidal from '@/assets/vidal.png'
-import naisa from '@/assets/naisa.png'
-import cleydson from '@/assets/cleydson.png'
+import TeacherCard from "../ui/TeacherCard"
+import fabio from '../../assets/Fabio.png'
+import vidal from '../../assets/Vidal.png'
+import naisa from '../../assets/Naisa.png'
+import cleydson from '../../assets/Cleydson.png'
 
 
 export default function Teachers() {
     return (
         <div className="bg-linear-to-r from-[#5500FF] from-0% via-[#0041CC] via-50% to-[#0A0A0A] to-100% text-white min-h-screen flex flex-col items-center">
 
-            <div className="flex flex-col items-center mt-[40px] font-bold ">
+            <div className="flex flex-col items-center mt-10 font-bold ">
                 <h1 className="text-[3rem]">
                     Conheça nossos <span className="text-[#8E7BFF]">professores</span>
                 </h1>
@@ -18,10 +18,10 @@ export default function Teachers() {
                     Professores experientes, fascinados por tecnologia e preparados para guiar<br />
                  você na sua trajetória
                 </p>
-           
+
             </div>
 
-            <div className="flex flex-row gap-[20px] relative -bottom-30">
+            <div className="flex flex-row gap-5 relative -bottom-30">
                 <TeacherCard
                     name="Fabio Fernandes"
                     image={fabio}
