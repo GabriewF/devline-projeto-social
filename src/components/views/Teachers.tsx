@@ -1,8 +1,8 @@
 import TeacherCard from "../ui/TeacherCard"
-import fabio from '../../assets/Fabio.png'
-import vidal from '../../assets/Vidal.png'
-import naisa from '../../assets/Naisa.png'
-import cleydson from '../../assets/Cleydson.png'
+import fabio from '../../assets/avatars/Fabio.png'
+import vidal from '../../assets/avatars/Vidal.png'
+import naisa from '../../assets/avatars/Naisa.png'
+import cleydson from '../../assets/avatars/Cleydson.png'
 
 
 export default function Teachers() {
