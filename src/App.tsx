@@ -3,11 +3,12 @@ import './assets/css/fonts.css'
 import { createBrowserRouter, RouterProvider } from 'react-router'
 import Index from './pages'
 import Coursers from './components/views/About'
+import Teachers from './components/views/teachers'
 
 const router = createBrowserRouter([
   {
     path: "/",
-    Component: Index
+    Component: Teachers
   },
   {
     path: "/test",
