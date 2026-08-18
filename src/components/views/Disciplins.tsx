@@ -46,8 +46,8 @@ export default function Disciplins() {
 
 
     return (
-        <div className="flex items-start justify-center text-white h-screen flex-col">
-            <div className="h-[236px] flex items-center justify-center flex-col w-full">
+        <div className="flex items-start justify-center text-white flex-col">
+            <div className="h-59 flex items-center justify-center flex-col w-full">
                 <h1 className="text-[3rem] font-extrabold">Disciplinas <span className="text-[#8E7BFF]">Abordadas</span> </h1>
                 <p className="text-[25px]">Algumas das principais materias </p>
             </div>
@@ -57,7 +57,7 @@ export default function Disciplins() {
                         className={`cursor-pointer ${startIndex == 0 ? 'opacity-0' : 'opacity-100'}`}
                         onClick={backItems}
                     >
-                        <Icon icon="ic:round-play-arrow" className="rotate-180" width={60} height={60}/> 
+                        <Icon icon="ic:round-play-arrow" className="rotate-180" width={60} height={60}/>
                     </button>
                     <div className="flex items-center justify-start gap-[20px]">
                         {items
@@ -70,7 +70,7 @@ export default function Disciplins() {
                         className={`cursor-pointer ${lastIndex >= items.length-1 ? 'opacity-0' : 'opacity-100'}`}
                         onClick={nextItems}
                     >
-                        <Icon icon="ic:round-play-arrow" width={60} height={60}/> 
+                        <Icon icon="ic:round-play-arrow" width={60} height={60}/>
                     </button>
                 </div>
             </div>
