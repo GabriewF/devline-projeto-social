@@ -11,12 +11,6 @@ export default defineConfig({
         babel({ presets: [reactCompilerPreset()] })
     ],
 
-    resolve: {
-        alias: {
-            '@': path.resolve(__dirname, './src')
-        }
-    },
-
     server: {
         port: 5000
     }
