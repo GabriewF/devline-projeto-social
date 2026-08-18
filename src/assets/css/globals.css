@@ -1,0 +1,10 @@
+html {
+    background: linear-gradient(135deg,
+        oklch(0.3546 0.2121 281.59 / 38%) 28%,
+        oklch(0.0942 0.0498 301.85 / 36%) 78%,
+        oklch(0 0 0 / 36%) 100%
+    ), black;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+}

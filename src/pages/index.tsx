@@ -1,9 +1,18 @@
+import Footer from "../components/ui/Footer";
+import About from "../components/views/About";
+import Hero from "../components/views/Hero";
+import Trajectory from "../components/views/Trajectory";
 
 export default function Index() {
     return (
-        <div className='bg-black text-white font-hero text-[9rem] flex items-center justify-center flex-col h-screen'>
-            <h1>Trabalho em Andamento.</h1>
-            <h1>Home Screen</h1>
+        <div className="flex flex-col min-h-screen">
+            <main className="flex flex-col grow gap-16 items-center *:w-full *:max-w-480">
+                <Hero />
+                <About />
+                <Trajectory />
+            </main>
+
+            <Footer />
         </div>
     )
 }

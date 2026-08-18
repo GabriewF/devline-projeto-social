@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@theme {
+    --color-bg-400: #1a1a1a;
+
+    --font-bricolage: "Bricolage Grotesque", sans-serif;
+    --font-dm-sans: "DM Sans", sans-serif;
+    --font-onest: "Onest", sans-serif;
+    --font-syne: "Syne", sans-serif;
+}
