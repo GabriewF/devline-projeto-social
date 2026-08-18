@@ -6,7 +6,7 @@ import Trajectory from "../components/views/Trajectory";
 
 export default function Index() {
     return (
-        <div className="flex flex-col min-h-screen">
+        <div className="flex flex-col min">
             <main className="flex flex-col grow gap-16 items-center *:w-full *:max-w-480">
                 <Hero />
                 <About />
