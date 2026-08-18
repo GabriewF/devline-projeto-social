@@ -4,7 +4,7 @@ import "./assets/css/fonts.css";
 
 import { createBrowserRouter, RouterProvider } from 'react-router';
 import Index from './pages';
-import Coursers from './components/views/About';
+import Teste from "./pages/Teste";
 
 const router = createBrowserRouter([
   {
@@ -13,7 +13,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/test",
-    Component: Coursers
+    Component: Teste
   }
 ])
 
