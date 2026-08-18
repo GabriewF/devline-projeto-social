@@ -7,21 +7,19 @@ import cleydson from '../../assets/avatars/Cleydson.png'
 
 export default function Teachers() {
     return (
-        <div className="font-bricolage to-100% text-white min-h-screen flex flex-col items-center">
-
-            <div className="flex flex-col items-center mt-10 font-bold ">
-                <h1 className="text-[3rem]">
+        <div className="font-bricolage text-white flex flex-col gap-16 items-center">
+            <div className="flex flex-col items-center font-bold ">
+                <h1 className="text-5xl">
                     Conheça Nossos <span className="text-[#8E7BFF]">Professores</span>
                 </h1>
 
-                <p className="text-[20px] text-white/50 text-center font-light">
+                <p className="text-xl text-white/50 text-center font-light">
                     Professores experientes, fascinados por tecnologia e preparados para guiar<br />
                  você na sua trajetória
                 </p>
-
             </div>
 
-            <div className="flex flex-row gap-20 relative -bottom-30">
+            <div className="flex flex-row gap-20">
                 <TeacherCard
                     name="Fabio Fernandes"
                     image={fabio}
