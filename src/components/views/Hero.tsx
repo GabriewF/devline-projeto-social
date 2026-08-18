@@ -8,15 +8,10 @@ export default function Hero() {
             <img src={logomarcaInlineColor} alt="Logomarca Colorida" className="h-12" />
 
             <div className="flex flex-col gap-8 text-left">
-                <div className="flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full border-white/20 border w-fit">
-                    <i className="rounded-full bg-green-500 h-2 w-2" />
-                    <span className="font-dm-sans font-medium text-xs text-white">INSCRIÇÕES ABERTAS · dezembro 2026.2</span>
-                </div>
-
                 <span className="font-syne font-bold text-8xl text-white">
                     Seu futuro<br />
                     começa<br />
-                    <span className="text-white/70">com a escolha</span><br/>
+                    <span className="text-white/70">com a escolha</span><br />
                     certa.
                 </span>
 
