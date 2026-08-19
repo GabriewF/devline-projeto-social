@@ -9,12 +9,14 @@ export default function Hero() {
             <div className="flex flex-row gap-8 items-center justify-between w-full">
                 <img src={logomarcaInlineMono} alt="Logomarca Colorida" className="h-8" />
 
-                <div className="flex text-2xl gap-4 items-center justify-center font-bricolage font-stretch-100% text-white divide-white">
-                    <a href="#hero">Início</a>
-                    <a href="#sobre">Sobre o Curso</a>
-                    <a href="#disciplinas">Disciplinas</a>
-                    <a href="#professores">Professores</a>
-                    <a href="#trajetoria">Trajetória</a>
+                <div className="flex flex-row gap-8 items-center justify-center font-bricolage text-2xl text-white">
+                    <nav className="flex items-center justify-center divide-x-2 divide-dotted divide-white/25 *:px-4">
+                        <a href="#hero">Início</a>
+                        <a href="#sobre">Sobre o Curso</a>
+                        <a href="#disciplinas">Disciplinas</a>
+                        <a href="#professores">Professores</a>
+                        <a href="#trajetoria">Trajetória</a>
+                    </nav>
 
                     <a
                         href="#vem-ser-ds"
