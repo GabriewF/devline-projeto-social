@@ -1,34 +1,63 @@
-# React + TypeScript + Vite
+<div align="center">
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+# 💻 Desenvolvimento de Sistemas
 
-Currently, two official plugins are available:
+### EEEP Francisca Neilyta Carneiro Albuquerque
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+<img src="./src/assets/logomarca+inline-color.svg" alt="Logo da EEEP" width="400"/>
 
-## React Compiler
+<br>
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+**Tecnologia • Inovação • Criatividade • Futuro**
 
-Note: This will impact Vite dev & build performances.
+</div>
 
-## Expanding the Oxlint configuration
+---
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+## 📚 Sobre o Projeto
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
+O projeto **DevLine** foi desenvolvido pelos alunos do curso de **Desenvolvimento de Sistemas** da **EEEP Francisca Neilyta Carneiro Albuquerque**.
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+A proposta é apresentar o curso, seus conhecimentos, projetos e as possibilidades que a área de tecnologia oferece para os estudantes.
+
+> 🚀 **Aprender tecnologia é transformar ideias em soluções.**
+
+---
+
+## 🎓 Sobre o Curso
+
+O curso de **Desenvolvimento de Sistemas** prepara os estudantes para compreender, desenvolver e aplicar soluções tecnológicas em diferentes contextos.
+
+Durante a formação, os alunos têm contato com conceitos fundamentais da área de desenvolvimento de software, passando desde a lógica de programação até a criação de aplicações completas.
+
+### 🧠 Principais conhecimentos
+
+- 💡 Lógica de Programação
+- 🌐 Desenvolvimento Web
+- 🗄️ Banco de Dados
+- 🔌 APIs e integração de sistemas
+- 🎨 Desenvolvimento de interfaces
+- 🚀 Projetos e soluções tecnológicas
+
+---
+
+## 🛠️ Tecnologias
+
+O curso possibilita o contato com diferentes tecnologias e ferramentas utilizadas no mercado.
+
+<div align="center">
+
+<img src="https://skillicons.dev/icons?i=html,css,js,java,python,mysql,git,github" />
+
+</div>
+
+---
+
+
+<div align="center">
+
+### 🚀 Do aprendizado à inovação.
+
+**EEEP Francisca Neilyta Carneiro Albuquerque**
+
+</div>
