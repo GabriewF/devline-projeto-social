@@ -1,4 +1,3 @@
-import { useState } from "react";
 import CardDiscipline from "../ui/DisciplinesCard";
 
 export default function Disciplins() {
