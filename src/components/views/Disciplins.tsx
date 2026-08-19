@@ -39,16 +39,6 @@ export default function Disciplins() {
     const [startIndex, setStartIndex] = useState(0);
     const [lastIndex, setlastIndex] = useState(2);
 
-    const nextItems = () => {
-        setStartIndex(startIndex + 3);
-        setlastIndex(lastIndex + 3);
-        console.log(items.length);
-    };
-
-    const backItems = () => {
-        setStartIndex(startIndex - 3);
-        setlastIndex(lastIndex - 3);
-    };
 
     return (
         <div
@@ -66,32 +56,29 @@ export default function Disciplins() {
                 </p>
             </div>
 
-            <div className="flex gap-8 items-center justify-center w-full">
-                <button
-                    className={startIndex == 0 ? "opacity-0 cursor-default" : "opacity-100 cursor-pointer"}
-                    disabled={startIndex == 0}
-                    onClick={backItems}
-                >
-                    <Icon icon="ic:round-play-arrow" className="rotate-180" width={60} height={60} />
-                </button>
-
-                <div className="flex items-center justify-start gap-5">
-                    {items
-                        .filter((_, index) => index >= startIndex && index <= lastIndex)
-                        .map((v) => (
-                            <CardDiscipline icon={v.icon} label={v.label} />
+            <div className="flex w-full justify-center">
+                <div className="flex w-[70%] overflow-hidden scrollbar-none mask-x mask-x-from-95%">
+                        
+                    <div className="flex shrink-0 items-center gap-5 animate-slide-infinite">
+                        {items.map((v, index) => (
+                            <CardDiscipline
+                                key={`first-${index}`}
+                                icon={v.icon}
+                                label={v.label}
+                            />
                         ))}
-                </div>
+                    </div>
 
-                <button
-                    className={
-                        lastIndex >= items.length - 1 ? "opacity-0 cursor-default" : "opacity-100 cursor-pointer"
-                    }
-                    disabled={lastIndex >= items.length - 1}
-                    onClick={nextItems}
-                >
-                    <Icon icon="ic:round-play-arrow" width={60} height={60} />
-                </button>
+                    <div className="flex shrink-0 items-center gap-5 animate-slide-infinite">
+                        {items.map((v, index) => (
+                            <CardDiscipline
+                                key={`second-${index}`}
+                                icon={v.icon}
+                                label={v.label}
+                            />
+                        ))}
+                    </div>
+                </div>
             </div>
         </div>
     );

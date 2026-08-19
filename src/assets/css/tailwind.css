@@ -17,4 +17,19 @@
     --color-signature-purple-800: oklch(0.807 0.102 286.658);
     --color-signature-purple-900: oklch(0.878 0.062 286.658);
     --color-signature-purple-950: oklch(0.95 0.025 286.658);
+
+
+    --animate-slide-infinite: slide-infinite 10s linear infinite; 
+    --animate-slide-infinite-slow: slide-infinite 19s linear infinite; 
+
+
+    @keyframes slide-infinite {
+        from {
+            transform: translateX(0) ;
+        }
+
+        to {
+            transform: translateX(-100%) ;
+        }
+    }
 }

@@ -18,11 +18,11 @@ export default function About() {
                 </p>
             </div>
 
-            <div className="flex flex-1 items-center justify-center px-10">
+            <div className="py-6 flex flex-1 items-center justify-center px-10">
                 <div
                     className="
-                    flex gap-18
-                    w-4/5 px-24 py-6
+                    flex
+                    w-4/5 py-6
                     items-center justify-start
 
                     mask-x
@@ -32,33 +32,65 @@ export default function About() {
                     overflow-x-auto
 
                     scrollbar-none
-                    snap-x snap-mandatory
                 "
                 >
-                    {imagesIndex.map((_, index) => (
-                        <img
-                            className="
-                                w-[320px]
-                                object-cover
-                                aspect-3/4
+                    <div className="flex shrink-0 items-center animate-slide-infinite-slow">
+                        {imagesIndex.map((_, index) => (
+                            <img
+                                className="
+                                    w-[320px]
+                                    object-cover
+                                    aspect-3/4
 
-                                rounded-[20px]
-                                snap-center
-                                transition-all
-                                duration-300
-                                hover:scale-105
-                                shrink-0
-                                will-change-transform
+                                    px-2.5
 
-                                transform-gpu
-                                origin-center
-                            "
+                                    rounded-[20px]
+                                    snap-center
+                                    transition-all
+                                    duration-300
+                                    hover:scale-105
+                                    shrink-0
+                                    will-change-transform
 
-                            src={`/imgs/about/${index}.png`}
-                            alt="Imagens"
-                            key={index}
-                        />
-                    ))}
+                                    transform-gpu
+                                    origin-center
+                                "
+
+                                src={`/imgs/about/${index}.png`}
+                                alt="Imagens"
+                                key={index}
+                            />
+                        ))}
+                    </div>
+
+                    <div className="flex shrink-0 items-center animate-slide-infinite-slow">
+                        {imagesIndex.map((_, index) => (
+                            <img
+                                className="
+                                    w-[320px]
+                                    object-cover
+                                    aspect-3/4
+
+                                    px-2.5
+
+                                    rounded-[20px]
+                                    snap-center
+                                    transition-all
+                                    duration-300
+                                    hover:scale-105
+                                    shrink-0
+                                    will-change-transform
+
+                                    transform-gpu
+                                    origin-center
+                                "
+
+                                src={`/imgs/about/${index}.png`}
+                                alt="Imagens"
+                                key={index}
+                            />
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>
