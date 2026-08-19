@@ -14,7 +14,7 @@ export default function Disciplins() {
         },
         {
             icon: "akar-icons:html-fill",
-            label: "Programação Web",
+            label: <span>Programação<br />Web</span>,
         },
         {
             icon: "file-icons:arduino",
@@ -36,43 +36,51 @@ export default function Disciplins() {
     const nextItems = () => {
         setStartIndex(startIndex + 3);
         setlastIndex(lastIndex + 3);
-        console.log(items.length)
-    }
+        console.log(items.length);
+    };
 
     const backItems = () => {
         setStartIndex(startIndex - 3);
         setlastIndex(lastIndex - 3);
-    }
-
+    };
 
     return (
-        <div className="flex items-start justify-center text-white flex-col">
-            <div className="h-59 flex items-center justify-center flex-col w-full">
-                <h1 className="text-[3rem] font-extrabold">Disciplinas <span className="text-[#8E7BFF]">Abordadas</span> </h1>
-                <p className="text-[25px]">Algumas das principais materias </p>
+        <div className="flex flex-col gap-12 items-start justify-center text-white text-center font-bricolage">
+            <div className="flex flex-col items-center justify-center w-full">
+                <h1 className="text-5xl font-extrabold">
+                    Disciplinas <span className="text-signature-purple-500">Abordadas</span>{" "}
+                </h1>
+                <p className="text-2xl text-inherit/60">
+                    Conheça algumas das principais matérias que fazem parte
+                    <br />
+                    da nossa formação em <span className="text-signature-purple-200">Desenvolvimento de Sistemas</span>.
+                </p>
             </div>
-            <div className="flex flex-1 items-center justify-center w-full">
-                <div className="flex ">
-                    <button
-                        className={`cursor-pointer ${startIndex == 0 ? 'opacity-0' : 'opacity-100'}`}
-                        onClick={backItems}
-                    >
-                        <Icon icon="ic:round-play-arrow" className="rotate-180" width={60} height={60}/>
-                    </button>
-                    <div className="flex items-center justify-start gap-[20px]">
-                        {items
-                            .filter((_, index) => index >= startIndex && index <= lastIndex)
-                            .map((v) => (
-                                <CardDiscipline icon={v.icon} label={v.label} />
-                            ))}
-                    </div>
-                    <button
-                        className={`cursor-pointer ${lastIndex >= items.length-1 ? 'opacity-0' : 'opacity-100'}`}
-                        onClick={nextItems}
-                    >
-                        <Icon icon="ic:round-play-arrow" width={60} height={60}/>
-                    </button>
+
+            <div className="flex gap-8 items-center justify-center w-full">
+                <button
+                    className={startIndex == 0 ? "opacity-0 cursor-default" : "opacity-100 cursor-pointer"}
+                    disabled={startIndex == 0}
+                    onClick={backItems}
+                >
+                    <Icon icon="ic:round-play-arrow" className="rotate-180" width={60} height={60} />
+                </button>
+
+                <div className="flex items-center justify-start gap-5">
+                    {items
+                        .filter((_, index) => index >= startIndex && index <= lastIndex)
+                        .map((v) => <CardDiscipline icon={v.icon} label={v.label} />)}
                 </div>
+
+                <button
+                    className={
+                        lastIndex >= items.length - 1 ? "opacity-0 cursor-default" : "opacity-100 cursor-pointer"
+                    }
+                    disabled={lastIndex >= items.length - 1}
+                    onClick={nextItems}
+                >
+                    <Icon icon="ic:round-play-arrow" width={60} height={60} />
+                </button>
             </div>
         </div>
     );

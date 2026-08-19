@@ -7,4 +7,14 @@
     --font-dm-sans: "DM Sans", sans-serif;
     --font-onest: "Onest", sans-serif;
     --font-syne: "Syne", sans-serif;
+
+    --color-signature-purple-50: oklch(0.263 0.152 286.658);
+    --color-signature-purple-100: oklch(0.363 0.21 286.658);
+    --color-signature-purple-200: oklch(0.463 0.268 286.658);
+    --color-signature-purple-300: oklch(0.563 0.255 286.658);
+    --color-signature-purple-500: oklch(0.663 0.189 286.658);
+    --color-signature-purple-700: oklch(0.735 0.144 286.658);
+    --color-signature-purple-800: oklch(0.807 0.102 286.658);
+    --color-signature-purple-900: oklch(0.878 0.062 286.658);
+    --color-signature-purple-950: oklch(0.95 0.025 286.658);
 }
