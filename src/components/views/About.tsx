@@ -1,5 +1,5 @@
 export default function About() {
-    const imagesIndex = new Array(18).fill(0);
+    const imagesIndex = new Array(16).fill(0);
 
     return (
         <div id="sobre" className="flex flex-col gap-8 w-full">

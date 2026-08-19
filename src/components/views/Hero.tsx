@@ -44,33 +44,23 @@ export default function Hero() {
                         <br />
                         começa
                         <br />
-                        <span className="text-white/70">com a escolha</span>
+                        <span className="text-signature-purple-500/70">com a escolha</span>
                         <br />
                         certa.
                     </span>
 
                     <p className="font-dm-sans text-white/75 text-2xl ">
-                        Construa hoje a base do futuro que você imagina, criando
-                        <br />
-                        ideias, caminhos e oportunidades que irão transformar a<br />
-                        sua jornada
+                        Conheça o curso de <i><b>Desenvolvimento de Sistemas</b></i><br />
+                        e descubra <i><b>novas possibilidades</b></i> para o seu <i><b>futuro</b></i>.
                     </p>
 
-                    <div className="flex flex-row gap-3 w-fit font-bricolage font-bold text-white text-lg align-middle">
+                    <div className="flex flex-row gap-3 w-fit font-bricolage font-bold text-white text-xl align-middle">
                         <a
                             href="#sobre"
-                            className="bg-signature-purple-300 rounded-xl flex justify-center items-center grid-flow-col gap-2 px-8 py-4"
+                            className="bg-signature-purple-300 rounded-full flex justify-center items-center grid-flow-col gap-2 px-8 py-4"
                         >
                             <span>Quero conhecer melhor</span>
-                            <Icon icon="lucide:arrow-right" width="20" />
-                        </a>
-
-                        <a
-                            href="#disciplinas"
-                            className="border-white/30 border-2 rounded-xl flex justify-center items-center grid-flow-col gap-2 px-8 py-4"
-                        >
-                            <span>Ver Disciplinas</span>
-                            <Icon icon="lucide:arrow-down" width="20" />
+                            <Icon className="rounded-full bg-white text-signature-purple-300 p-1 w-7 h-7" icon="lucide:arrow-right" />
                         </a>
                     </div>
                 </div>
