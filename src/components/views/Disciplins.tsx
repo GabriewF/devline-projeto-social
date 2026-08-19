@@ -1,6 +1,5 @@
 import { useState } from "react";
 import CardDiscipline from "../ui/DisciplinesCard";
-import { Icon } from "@iconify/react";
 
 export default function Disciplins() {
     const items = [
@@ -35,10 +34,6 @@ export default function Disciplins() {
             label: "Desenvolvimento Mobile",
         },
     ];
-
-    const [startIndex, setStartIndex] = useState(0);
-    const [lastIndex, setlastIndex] = useState(2);
-
 
     return (
         <div
