@@ -51,7 +51,7 @@ export default function Disciplins() {
             </div>
 
             <div className="flex w-full justify-center">
-                <div className="flex w-[70%] overflow-hidden scrollbar-none mask-x mask-x-from-95%">
+                <div className="flex w-[70%] overflow-hidden scrollbar-none mask-x mask-x-from-95% gap-5">
                         
                     <div className="flex shrink-0 items-center gap-5 animate-slide-infinite">
                         {items.map((v, index) => (
