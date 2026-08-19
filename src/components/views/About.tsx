@@ -2,7 +2,7 @@ export default function About() {
     const imagesIndex = new Array(18).fill(0);
 
     return (
-        <div className="flex flex-col gap-8 w-full">
+        <div id="sobre" className="flex flex-col gap-8 w-full">
             <div className="flex flex-col items-center text-white font-bricolage">
                 <h1 className="text-[3rem] font-extrabold [font-optical-size:6rem]">
                     Sobre o curso de <span className="text-signature-purple-500">Desenvolvimento de Sistemas</span>
@@ -10,13 +10,17 @@ export default function About() {
 
                 <p className="text-[25px] text-center text-white/60">
                     Se criatividade e tecnologia fazem parte de você, o curso de{" "}
-                    <span className="text-signature-purple-200">Desenvolvimento de<br /> Sistemas</span>
-                    {" "}é a oportunidade perfeita para transformar suas ideias em soluções reais
+                    <span className="text-signature-purple-200">
+                        Desenvolvimento de
+                        <br /> Sistemas
+                    </span>{" "}
+                    é a oportunidade perfeita para transformar suas ideias em soluções reais
                 </p>
             </div>
 
             <div className="flex flex-1 items-center justify-center px-10">
-                <div className="
+                <div
+                    className="
                     flex gap-18
                     w-4/5 px-24 py-6
                     items-center justify-start
@@ -29,7 +33,8 @@ export default function About() {
 
                     scrollbar-none
                     snap-x snap-mandatory
-                ">
+                "
+                >
                     {imagesIndex.map((_, index) => (
                         <img
                             className="

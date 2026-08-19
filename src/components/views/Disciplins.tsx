@@ -1,5 +1,5 @@
 import { useState } from "react";
-import CardDiscipline from "../ui/Disciplins/Card";
+import CardDiscipline from "../ui/DisciplinesCard";
 import { Icon } from "@iconify/react";
 
 export default function Disciplins() {
@@ -14,7 +14,13 @@ export default function Disciplins() {
         },
         {
             icon: "akar-icons:html-fill",
-            label: <span>Programação<br />Web</span>,
+            label: (
+                <span>
+                    Programação
+                    <br />
+                    Web
+                </span>
+            ),
         },
         {
             icon: "file-icons:arduino",
@@ -45,7 +51,10 @@ export default function Disciplins() {
     };
 
     return (
-        <div className="flex flex-col gap-12 items-start justify-center text-white text-center font-bricolage">
+        <div
+            id="disciplinas"
+            className="flex flex-col gap-12 items-start justify-center text-white text-center font-bricolage"
+        >
             <div className="flex flex-col items-center justify-center w-full">
                 <h1 className="text-5xl font-extrabold">
                     Disciplinas <span className="text-signature-purple-500">Abordadas</span>{" "}
@@ -69,7 +78,9 @@ export default function Disciplins() {
                 <div className="flex items-center justify-start gap-5">
                     {items
                         .filter((_, index) => index >= startIndex && index <= lastIndex)
-                        .map((v) => <CardDiscipline icon={v.icon} label={v.label} />)}
+                        .map((v) => (
+                            <CardDiscipline icon={v.icon} label={v.label} />
+                        ))}
                 </div>
 
                 <button

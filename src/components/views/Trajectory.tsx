@@ -11,35 +11,36 @@ import TrajectoryItem from "../ui/TrajectoryItem";
 
 export default function Trajectory() {
     return (
-        <section className="px-32 flex flex-col gap-32 items-center font-bricolage text-white text-center">
+        <section
+            id="trajetoria"
+            className="px-32 flex flex-col gap-16 items-center font-bricolage text-white text-center"
+        >
             <section className="flex flex-col items-center">
                 <h2 className="text-5xl font-extrabold [font-optical-size:6rem]">
                     Conheça Como Foi <span className="text-purple-600">Nossa Trajetória</span>
                 </h2>
 
                 <p className="text-2xl text-white/60 font-light">
-                    Acompanhe como foi nossa trajetória ao decorrer do curso,<br />
+                    Acompanhe como foi nossa trajetória ao decorrer do curso,
+                    <br />
                     mesclando entre a área técnica e a área da base comum
                 </p>
             </section>
 
-            <div className="grid grid-rows-8 grid-cols-[1fr_5px_1fr] gap-24">
+            <div className="grid grid-rows-8 grid-cols-[1fr_5px_1fr] gap-16">
                 <div className="relative mt-32 bg-white rounded-full col-start-2 row-span-full">
                     <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-6 h-6 bg-white rounded-full"></div>
                     <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-6 h-6 bg-white rounded-full"></div>
-                  </div>
+                </div>
 
                 <div></div>
                 <TrajectoryItem>
                     <div className="flex flex-col">
-                        <h1 className="text-4xl font-extrabold [font-optical-size:6rem]">
-                            Interclasse
-                        </h1>
+                        <h1 className="text-4xl font-extrabold [font-optical-size:6rem]">Interclasse</h1>
 
                         <p className="text-white/60 text-2xl">
-                            No Interclasse, nossa torcida mostrou que energia,
-                            união e paixão fazem a diferença, e conquistamos
-                            o título de Melhor Torcida!
+                            No Interclasse, nossa torcida mostrou que energia, união e paixão fazem a diferença, e
+                            conquistamos o título de Melhor Torcida!
                         </p>
                     </div>
 
@@ -48,9 +49,7 @@ export default function Trajectory() {
 
                 <TrajectoryItem>
                     <div className="flex flex-col">
-                        <h1 className="text-4xl font-extrabold [font-optical-size:6rem]">
-                            Simpósio de TI
-                        </h1>
+                        <h1 className="text-4xl font-extrabold [font-optical-size:6rem]">Simpósio de TI</h1>
 
                         <p className="text-white/60 text-2xl">
                             Evento exclusivo a área de TI, um dia de aprendizado e gincanas

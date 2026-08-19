@@ -11,5 +11,5 @@ export default function Footer() {
                 Seu futuro começa com a escolha <span className="font-bold">certa</span>.
             </p>
         </footer>
-    )
+    );
 }

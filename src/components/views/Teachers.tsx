@@ -1,25 +1,25 @@
-import TeacherCard from "../ui/TeacherCard"
-import fabio from '../../assets/avatars/Fabio.png'
-import vidal from '../../assets/avatars/Vidal.png'
-import naisa from '../../assets/avatars/Naisa.png'
-import cleydson from '../../assets/avatars/Cleydson.png'
-
+import TeacherCard from "../ui/TeacherCard";
+import fabio from "../../assets/avatars/Fabio.png";
+import vidal from "../../assets/avatars/Vidal.png";
+import naisa from "../../assets/avatars/Naisa.png";
+import cleydson from "../../assets/avatars/Cleydson.png";
 
 export default function Teachers() {
     return (
-        <div className="font-bricolage text-white flex flex-col gap-16 items-center">
+        <div id="professores" className="font-bricolage text-white flex flex-col gap-16 items-center">
             <div className="flex flex-col items-center font-bold ">
                 <h1 className="text-5xl">
                     Conheça Nossos <span className="text-signature-purple-500">Professores</span>
                 </h1>
 
                 <p className="text-2xl text-white/60 text-center font-light">
-                    Professores experientes, apaixonados por tecnologia e prontos para<br />
+                    Professores experientes, apaixonados por tecnologia e prontos para
+                    <br />
                     transformar conhecimento em oportunidades para o seu futuro.
                 </p>
             </div>
 
-            <div className="flex flex-row gap-8">
+            <div className="px-24 flex flex-row gap-8">
                 <TeacherCard
                     name="Fabio Fernandes"
                     image={fabio}
@@ -46,7 +46,6 @@ export default function Teachers() {
                     rounded
                 />
             </div>
-
         </div>
-    )
+    );
 }
