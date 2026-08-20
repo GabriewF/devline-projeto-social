@@ -53,7 +53,7 @@ export default function Clock() {
 
                 const match = text.match(/^ts=([\d.]+)/m);
                 if (match) {
-                    const cloudflareTimeInMs = parseFloat(match.toString()) * 1000;
+                    const cloudflareTimeInMs = parseFloat(match[1]) * 1000;
                     const adjustedServerTime = cloudflareTimeInMs + (latency / 2);
                     const offset = adjustedServerTime - Date.now();
 
