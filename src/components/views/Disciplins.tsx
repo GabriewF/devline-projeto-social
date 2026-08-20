@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import CardDiscipline from "../ui/DisciplinesCard";
 
 export default function Disciplins() {
@@ -39,7 +40,14 @@ export default function Disciplins() {
             id="disciplinas"
             className="flex flex-col items-start justify-center gap-12 font-bricolage text-center text-white"
         >
-            <div className="flex flex-col items-center justify-center w-full">
+            {/* Bloco de Título com Scroll Reveal */}
+            <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.7, ease: "easeOut" }}
+                className="flex flex-col items-center justify-center w-full"
+            >
                 <h1 className="text-5xl font-extrabold">
                     Disciplinas <span className="text-signature-purple-500">Abordadas</span>{" "}
                 </h1>
@@ -48,9 +56,16 @@ export default function Disciplins() {
                     <br />
                     da nossa formação em <span className="text-signature-purple-200">Desenvolvimento de Sistemas</span>.
                 </p>
-            </div>
+            </motion.div>
 
-            <div className="flex justify-center w-full">
+            {/* Carrossel com Scroll Reveal e atraso na animação */}
+            <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+                className="flex justify-center w-full"
+            >
                 <div className="flex w-[70%] gap-5 py-6 overflow-hidden mask-x mask-x-from-95% scrollbar-none">
                     <div className="flex shrink-0 items-center gap-5 animate-slide-infinite">
                         {items.map((v, index) => (
@@ -72,7 +87,7 @@ export default function Disciplins() {
                         ))}
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </div>
     );
 }

@@ -2,11 +2,21 @@ import logomarcaInlineMono from "../../assets/hero/logo.svg";
 import heroImage from "../../assets/hero/hero-photo.png";
 
 import { Icon } from "@iconify/react";
+import { motion } from "framer-motion";
 
 export default function Hero() {
     return (
-        <section id="hero" className="flex flex-col items-start gap-18 px-32 py-18">
-            <div className="flex flex-row items-center justify-between w-full gap-8">
+        <section
+            id="hero"
+            className="flex flex-col items-start gap-18 px-32 py-18"
+        >
+            {/* Header / Navbar */}
+            <motion.div
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                className="flex flex-row items-center justify-between w-full gap-8"
+            >
                 <img src={logomarcaInlineMono} alt="Logomarca Colorida" className="h-8" />
 
                 <div className="flex flex-row items-center justify-center gap-8 font-bricolage text-2xl text-white">
@@ -25,10 +35,17 @@ export default function Hero() {
                         Conheça Mais
                     </a>
                 </div>
-            </div>
+            </motion.div>
 
+            {/* Conteúdo Principal */}
             <div className="flex flex-row gap-16">
-                <div className="flex flex-col flex-4 gap-8 pt-12 text-left">
+                {/* Lado Esquerdo - Texto e CTA */}
+                <motion.div
+                    initial={{ opacity: 0, x: -50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+                    className="flex flex-col flex-4 gap-8 pt-12 text-left"
+                >
                     <span className="font-syne text-7xl font-bold text-white">
                         Seu futuro
                         <br />
@@ -53,11 +70,17 @@ export default function Hero() {
                             <Icon className="w-7 h-7 p-1 rounded-full bg-white text-signature-purple-300" icon="lucide:arrow-right" />
                         </a>
                     </div>
-                </div>
+                </motion.div>
 
-                <div className="flex-5">
+                {/* Lado Direito - Imagem */}
+                <motion.div
+                    initial={{ opacity: 0, x: 50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+                    className="flex-5"
+                >
                     <img src={heroImage} alt="" />
-                </div>
+                </motion.div>
             </div>
         </section>
     );

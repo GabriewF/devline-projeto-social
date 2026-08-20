@@ -1,9 +1,19 @@
+import { motion } from "framer-motion";
+
 export default function About() {
     const imagesIndex = new Array(16).fill(0);
 
     return (
-        <div id="sobre" className="flex flex-col w-full gap-8">
-            <div className="flex flex-col items-center font-bricolage text-white">
+        <div id="sobre" className="flex flex-col w-full gap-8"
+        >
+            {/* Bloco de Título e Subtítulo */}
+            <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.7, ease: "easeOut" }}
+                className="flex flex-col items-center font-bricolage text-white"
+            >
                 <h1 className="font-extrabold text-[3rem] [font-optical-size:6rem]">
                     Sobre o curso de <span className="text-signature-purple-500">Desenvolvimento de Sistemas</span>
                 </h1>
@@ -16,9 +26,16 @@ export default function About() {
                     </span>{" "}
                     é a oportunidade perfeita para transformar suas ideias em soluções reais
                 </p>
-            </div>
+            </motion.div>
 
-            <div className="flex flex-1 items-center justify-center px-10 py-6 overflow-x-hidden">
+            {/* Carrossel de Imagens */}
+            <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+                className="flex flex-1 items-center justify-center px-10 py-6 overflow-x-hidden"
+            >
                 <div className="flex items-center justify-start w-4/5 py-6 overflow-y-visible mask-x mask-x-from-95% scrollbar-none">
                     <div className="flex shrink-0 items-center animate-slide-infinite">
                         {imagesIndex.map((_, index) => (
@@ -42,7 +59,7 @@ export default function About() {
                         ))}
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </div>
     );
 }

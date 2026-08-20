@@ -96,7 +96,8 @@ export default function Clock() {
             }));
         }, 1000);
 
-        const syncInterval = setInterval(syncWithNTP, 60000);
+        // Atualizado para executar a cada 25 segundos (25000ms)
+        const syncInterval = setInterval(syncWithNTP, 25000);
 
         return () => {
             clearInterval(displayInterval);
@@ -138,7 +139,7 @@ export default function Clock() {
 
                 <Icon
                     icon={isSyncing ? "mdi:loading" : "mdi:circle"}
-                    className={`text-[10px] ${isSyncing ? "animate-spin text-white/40" : "text-emerald-500/80"}`}
+                    className={`text-[10px] ${isSyncing ? "animate-spin text-yellow-400" : "text-emerald-500/80"}`}
                 />
             </div>
 
