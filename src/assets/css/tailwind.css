@@ -19,8 +19,7 @@
     --color-signature-purple-950: oklch(0.95 0.025 286.658);
 
 
-    --animate-slide-infinite: slide-infinite 10s linear infinite; 
-    --animate-slide-infinite-slow: slide-infinite 19s linear infinite; 
+    --animate-slide-infinite: slide-infinite 50s linear infinite;
 
 
     @keyframes slide-infinite {

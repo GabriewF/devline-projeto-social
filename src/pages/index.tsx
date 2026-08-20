@@ -9,7 +9,7 @@ import Trajectory from "../components/views/Trajectory";
 export default function Index() {
     return (
         <div className="flex flex-col min">
-            <main className="flex flex-col grow gap-32 items-center *:w-full *:max-w-480">
+            <main className="flex flex-col grow items-center gap-32 *:w-full *:max-w-480">
                 <Hero />
                 <About />
                 <Disciplins />
@@ -18,7 +18,9 @@ export default function Index() {
                 <Invite />
             </main>
 
-            <Footer />
+            <div className="contents bg-black">
+                <Footer />
+            </div>
         </div>
     );
 }

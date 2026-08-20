@@ -37,7 +37,7 @@ export default function Disciplins() {
     return (
         <div
             id="disciplinas"
-            className="flex flex-col gap-12 items-start justify-center text-white text-center font-bricolage"
+            className="flex flex-col items-start justify-center gap-12 font-bricolage text-center text-white"
         >
             <div className="flex flex-col items-center justify-center w-full">
                 <h1 className="text-5xl font-extrabold">
@@ -50,9 +50,8 @@ export default function Disciplins() {
                 </p>
             </div>
 
-            <div className="flex w-full justify-center">
-                <div className="flex w-[70%] overflow-hidden scrollbar-none mask-x mask-x-from-95% gap-5">
-                        
+            <div className="flex justify-center w-full">
+                <div className="flex w-[70%] gap-5 py-6 overflow-hidden mask-x mask-x-from-95% scrollbar-none">
                     <div className="flex shrink-0 items-center gap-5 animate-slide-infinite">
                         {items.map((v, index) => (
                             <CardDiscipline

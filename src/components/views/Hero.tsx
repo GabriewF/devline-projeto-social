@@ -6,10 +6,10 @@ import { Icon } from "@iconify/react";
 export default function Hero() {
     return (
         <section id="hero" className="flex flex-col items-start gap-18 px-32 py-18">
-            <div className="flex flex-row gap-8 items-center justify-between w-full">
+            <div className="flex flex-row items-center justify-between w-full gap-8">
                 <img src={logomarcaInlineMono} alt="Logomarca Colorida" className="h-8" />
 
-                <div className="flex flex-row gap-8 items-center justify-center font-bricolage text-2xl text-white">
+                <div className="flex flex-row items-center justify-center gap-8 font-bricolage text-2xl text-white">
                     <nav className="flex items-center justify-center divide-x-2 divide-dotted divide-white/25 *:px-4">
                         <a href="#hero">Início</a>
                         <a href="#sobre">Sobre o Curso</a>
@@ -20,17 +20,7 @@ export default function Hero() {
 
                     <a
                         href="#vem-ser-ds"
-                        className="
-                        bg-white hover:bg-transparent
-                        text-black hover:text-white
-                        font-light hover:font-black
-
-                        border-solid border-2 border-white/30
-                        text-center
-                        min-w-64
-
-                        px-6 py-2 rounded-full
-                        transition-all ease-out duration-300"
+                        className="min-w-64 px-6 py-2 rounded-full border-2 border-solid border-white/30 bg-white text-center font-light text-black transition-all duration-300 ease-out hover:bg-transparent hover:font-black hover:text-white"
                     >
                         Conheça Mais
                     </a>
@@ -38,8 +28,8 @@ export default function Hero() {
             </div>
 
             <div className="flex flex-row gap-16">
-                <div className="flex flex-col gap-8 text-left flex-4 pt-12">
-                    <span className="font-syne font-bold text-7xl text-white">
+                <div className="flex flex-col flex-4 gap-8 pt-12 text-left">
+                    <span className="font-syne text-7xl font-bold text-white">
                         Seu futuro
                         <br />
                         começa
@@ -49,18 +39,18 @@ export default function Hero() {
                         certa.
                     </span>
 
-                    <p className="font-dm-sans text-white/75 text-2xl ">
+                    <p className="font-dm-sans text-2xl text-white/75">
                         Conheça o curso de <i><b>Desenvolvimento de Sistemas</b></i><br />
                         e descubra <i><b>novas possibilidades</b></i> para o seu <i><b>futuro</b></i>.
                     </p>
 
-                    <div className="flex flex-row gap-3 w-fit font-bricolage font-bold text-white text-xl align-middle">
+                    <div className="flex flex-row w-fit gap-3 align-middle font-bricolage text-xl font-bold text-white">
                         <a
                             href="#sobre"
-                            className="bg-signature-purple-300 rounded-full flex justify-center items-center grid-flow-col gap-2 px-8 py-4"
+                            className="flex items-center justify-center grid-flow-col gap-2 px-8 py-4 rounded-full bg-signature-purple-300"
                         >
                             <span>Quero conhecer melhor</span>
-                            <Icon className="rounded-full bg-white text-signature-purple-300 p-1 w-7 h-7" icon="lucide:arrow-right" />
+                            <Icon className="w-7 h-7 p-1 rounded-full bg-white text-signature-purple-300" icon="lucide:arrow-right" />
                         </a>
                     </div>
                 </div>
