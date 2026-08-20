@@ -11,6 +11,8 @@ export default function Clock() {
         source,
         status,
         latency,
+        uncertainty,
+        resync,
     } = useServerTime();
 
     const [displaySecond, setDisplaySecond] =
@@ -18,8 +20,6 @@ export default function Clock() {
 
     /*
      * Atualiza somente quando o segundo muda.
-     * Isso permite animar a troca de HH:MM:SS
-     * sem recriar o elemento a cada 50ms.
      */
     useEffect(() => {
         const second = time.getSeconds();
@@ -59,29 +59,43 @@ export default function Clock() {
     const getStatusTooltip = () => {
         switch (status) {
             case "syncing":
-                return "Sincronizando horário com o servidor...";
-
-            case "local":
-                return "Modo desenvolvimento: horário local do dispositivo";
+                return "Sincronizando horário...";
 
             case "synced":
-                return `Horário alinhado ao servidor HTTP. Menor RTT: ${latency}ms`;
+                return `Horário sincronizado · RTT: ${latency}ms · Incerteza estimada: ±${uncertainty}ms · Clique para sincronizar novamente`;
 
             case "fallback":
-                return "Falha na sincronização: usando horário local";
+                return "Falha na sincronização. Usando horário local · Clique para tentar novamente";
 
             default:
                 return "";
         }
     };
 
+    const handleResync = () => {
+        if (!isSyncing) {
+            void resync();
+        }
+    };
+
     return (
         <div className="relative flex min-h-screen flex-col select-none font-bricolage text-white antialiased">
             {/* Indicador de sincronização */}
-            <div
-                className="absolute right-24 top-24 z-10 flex cursor-help items-center gap-3 text-white/30 transition-opacity duration-200 hover:opacity-100"
+            <button
+                type="button"
+                onClick={handleResync}
                 title={getStatusTooltip()}
+                aria-label="Sincronizar horário"
+                className="absolute right-24 top-24 z-10 flex cursor-pointer items-center gap-3 text-white/30 transition-opacity duration-200 hover:opacity-100"
             >
+                {/* Incerteza */}
+                {status === "synced" && (
+                    <span className="font-mono text-[11px] tabular-nums tracking-tight text-white/25">
+                        ±{uncertainty}ms
+                    </span>
+                )}
+
+                {/* Origem */}
                 <Icon
                     icon={
                         isServerSynced
@@ -91,6 +105,7 @@ export default function Clock() {
                     className="text-lg"
                 />
 
+                {/* Estado */}
                 <Icon
                     icon={
                         isSyncing
@@ -103,7 +118,7 @@ export default function Clock() {
                             : "text-emerald-500/80"
                     }`}
                 />
-            </div>
+            </button>
 
             <main className="flex grow flex-col items-center justify-center px-24">
                 <section
