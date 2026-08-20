@@ -96,7 +96,6 @@ export default function Clock() {
             }));
         }, 1000);
 
-        // ATUALIZAÇÃO RE-SINC: Modificado de 300000ms para 60000ms (1 minuto)
         const syncInterval = setInterval(syncWithNTP, 60000);
 
         return () => {
@@ -127,10 +126,9 @@ export default function Clock() {
     };
 
     return (
-        <div className="flex flex-col min-h-screen text-white antialiased select-none font-bricolage relative">
-
+        <div className="relative flex flex-col min-h-screen font-bricolage text-white select-none antialiased">
             <div
-                className="absolute top-24 right-24 flex items-center gap-3 text-white/30 transition-opacity hover:opacity-100 duration-200"
+                className="absolute top-24 right-24 flex items-center gap-3 text-white/30 transition-opacity duration-200 hover:opacity-100"
                 title={getStatusTooltip()}
             >
                 <Icon
@@ -144,13 +142,12 @@ export default function Clock() {
                 />
             </div>
 
-            {/* Conteúdo Central - Mantendo o container fluido e o texto enorme em 12rem */}
             <main className="flex flex-col grow items-center justify-center px-24">
-                <section id="relogio" className="flex flex-col items-center text-center w-full max-w-[90vw]">
-                    <h1 className="text-[20vw] sm:text-[19vw] md:text-[18vw] font-extrabold tracking-tight text-white opacity-60 tabular-nums select-none leading-none">
+                <section id="relogio" className="flex flex-col items-center w-full max-w-[90vw] text-center">
+                    <h1 className="leading-none select-none tabular-nums text-[20vw] font-extrabold tracking-tight text-white opacity-60 sm:text-[19vw] md:text-[18vw]">
                         {formattedTime}
                     </h1>
-                    <p className="text-[4vw] sm:text-[3vw] md:text-[2vw] text-white/50 font-light mt-6 capitalize tracking-wide">
+                    <p className="mt-6 text-[4vw] font-light capitalize tracking-wide text-white/50 sm:text-[3vw] md:text-[2vw]">
                         {formattedDate}
                     </p>
                 </section>
